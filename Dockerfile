@@ -15,13 +15,10 @@ RUN apt-get update && \
     emacs \
     python-setuptools \
     python-argparse \
-    python3-pip \
-    python-pip \
     mosquitto-clients \
     socat \
     g++-multilib \
-    net-tools\
-    gcc && \
+    net-tools && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -38,7 +35,11 @@ ENV PATH="/opt/gcc-arm-none-eabi-7-2018-q2-update/bin:${PATH}"
 USER $NB_UID
 
 # IoT-LAB CLI tools & Python tools
-RUN pip3 install --quiet --yes \
-    iotlabwscli iotlabsshcli iotlabcli \
-    aiocoap paho-mqtt pyserial
+RUN pip install iotlabwscli \
+                # iotlabsshcli \ @ todo fix install
+                iotlabcli \
+                aiocoap \
+                paho-mqtt \
+                pyserial
+
     
