@@ -25,8 +25,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true apt install -y tshark
-
 # Install ARM GNU Embedded toolchain
 ARG ARM_GCC_URL="https://developer.arm.com/-/media/Files/downloads/gnu-rm"
 ARG ARM_GCC_VERSION="7-2018q2"
