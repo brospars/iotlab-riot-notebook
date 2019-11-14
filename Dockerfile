@@ -18,7 +18,8 @@ RUN apt-get update && \
     mosquitto-clients \
     socat \
     g++-multilib \
-    net-tools && \
+    net-tools \
+    openssh-client && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -41,5 +42,7 @@ RUN pip install iotlabwscli \
                 aiocoap \
                 paho-mqtt \
                 pyserial
+
+RUN mkdir ~/work/.ssh && ln -s ~/work/.ssh ~/.ssh
 
     
