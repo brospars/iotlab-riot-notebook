@@ -41,7 +41,9 @@ RUN pip install iotlabwscli \
                 iotlabcli \
                 aiocoap \
                 paho-mqtt \
-                pyserial
+                pyserial \
+                cbor \
+                ed25519
 
 RUN mkdir ~/work/.ssh && ln -s ~/work/.ssh ~/.ssh
 
