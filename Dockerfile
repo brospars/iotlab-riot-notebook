@@ -37,7 +37,6 @@ USER $NB_UID
 
 # IoT-LAB CLI tools & Python tools
 RUN pip install iotlabwscli \
-                # iotlabsshcli \ @ todo fix install
                 iotlabcli \
                 aiocoap \
                 paho-mqtt \
