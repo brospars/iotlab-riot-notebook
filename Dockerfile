@@ -19,7 +19,8 @@ RUN apt-get update && \
     socat \
     g++-multilib \
     net-tools \
-    openssh-client && \
+    openssh-client \
+    bsdmainutils && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
